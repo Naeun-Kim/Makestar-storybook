@@ -1,0 +1,280 @@
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "makestar" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  &:before {
+    font-size: 16px;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+  }
+  &.icon-updated {
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 8px;
+      height: 8px;
+      background-color: $color-primary;
+      border-radius: 50%;
+    }
+  }
+}
+
+//icon
+
+.icon-baidu-circle:before {
+  content: "\e926";
+}
+.icon-ameblo-circle:before {
+  content: "\e927";
+}
+.icon-reddit-circle:before {
+  content: "\e928";
+}
+.icon-naver-line-circle:before {
+  content: "\e929";
+}
+.icon-weibo-circle:before {
+  content: "\e92a";
+}
+.icon-twitter-circle:before {
+  content: "\e92b";
+}
+.icon-hatena-circle:before {
+  content: "\e92c";
+}
+.icon-kakao-story-circle:before {
+  content: "\e92d";
+}
+.icon-mixi-circle:before {
+  content: "\e92e";
+}
+.icon-pinterest-circle:before {
+  content: "\e92f";
+}
+.icon-wechat-circle:before {
+  content: "\e930";
+}
+.icon-google-circle:before {
+  content: "\e931";
+}
+.icon-tencent-circle:before {
+  content: "\e932";
+}
+.icon-naver-band-circle:before {
+  content: "\e933";
+}
+.icon-facebook-circle:before {
+  content: "\e934";
+}
+.icon-link-circle:before {
+  content: "\e935";
+}
+.icon-play-arrow {
+  content: "\e925";
+}
+.icon-one-col-layout {
+  content: "\e923";
+}
+.icon-two-col-layout {
+  content: "\e924";
+}
+.icon-list-view:before {
+  content: "\e922";
+}
+.icon-grid-view:before {
+  content: "\e921";
+}
+.icon-edit:before {
+  content: "\e920";
+}
+.icon-comment:before {
+  content: "\e91f";
+}
+/*
+.icon-quote:before {
+  content: "\e913";
+}
+*/
+.icon-youku:before {
+  content: "\e914";
+}
+.icon-weibo:before {
+  content: "\e915";
+}
+.icon-naver:before {
+  content: "\e916";
+}
+.icon-facebook:before {
+  content: "\e917";
+}
+.icon-instagram:before {
+  content: "\e918";
+}
+.icon-youtube:before {
+  content: "\e919";
+}
+.icon-twitter:before {
+  content: "\e91a";
+}
+.icon-join:before {
+  content: "\e91b";
+}
+.icon-vote:before {
+  content: "\e91c";
+}
+.icon-alarm:before {
+  content: "\e91d";
+}
+.icon-play:before {
+  content: "\e91e";
+}
+.icon-add:before {
+  content: "\e910";
+}
+.icon-heart:before {
+  content: "\e911";
+}
+.icon-share {
+  transform: scaleX(-1);
+  &:before {
+    content: "\e912";
+  }
+}
+/*
+.icon-setting:before {
+  content: "\e90e";
+}
+.icon-user:before {
+  content: "\e90f";
+}
+.icon-arrow-bottom-sm:before {
+  content: '\e900';
+}
+.icon-arrow-next-sm:before {
+  content: "\e901";
+}
+.icon-arrow-next:before {
+  content: "\e902";
+}
+.icon-arrow-prev-sm:before {
+  content: "\e903";
+}
+.icon-arrow-prev:before {
+  content: "\e904";
+}
+.icon-arrow-top-sm:before {
+  content: "\e905";
+}
+.icon-cancel:before {
+  content: "\e906";
+}
+.icon-close:before {
+  content: "\e907";
+}
+.icon-language:before {
+  content: "\e908";
+}
+.icon-menu:before {
+  content: "\e909";
+}
+.icon-more-h:before {
+  content: "\e90a";
+}
+.icon-more-v:before {
+  content: "\e90b";
+}
+.icon-notification:before {
+  content: "\e90c";
+}
+.icon-search:before {
+  content: "\e90d";
+}
+*/
+.frequency {
+  &:before {
+    content: "\e91d";
+    @include font-icon;
+    margin-right: 4px;
+  }
+}
+.open-time {
+  &:before {
+    content: "\e91c";
+    @include font-icon;
+    margin-right: 4px;
+  }
+}
+
+.comment {
+  &:before {
+    content: "\e91f";
+    @include font-icon;
+    margin-right: 4px;
+  }
+}
+.voted {
+  &:before {
+    content: "\e91b";
+    @include font-icon;
+    margin-right: 4px;
+  }
+}
+.icon-collapse {
+  svg {
+    @include transition-default(transform, .35s);
+  }
+}
+
+.icon-sns {
+  &:before {
+    @include transition-bezier(color, .25s);
+    font-size: 32px;
+    color: $color-midgray;
+  }
+  $icons:(
+    'facebook': #455E99,
+    'google': #F93F2D,
+    'kakao-story': #FFC20E,
+    'naver-line': #00B900,
+    'naver-band': #00B900,
+    'pinterest': #CC2127,
+    'twitter': #2BA9E0,
+    'link': #E52E15,
+    'reddit': #FF5700,
+    'baidu': #1565C0,
+    'weibo': #E6162D,
+    'wechat': #00C40C,
+    'tencent': #12B7F5,
+    'ameblo': #2E863B,
+    'hatena': #00A4DE,
+    'mixi': #CAA75A
+  );
+  @each $name, $color in $icons {
+    &.icon-#{$name}-circle {
+      &:hover {
+        &:before {
+          color: $color;
+        }
+      }
+    }
+  }
+}

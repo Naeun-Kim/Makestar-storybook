@@ -1,0 +1,286 @@
+button,
+[role="button"]{
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  border-radius: 4px;
+  &.button {
+    border-color: transparent;
+    &-primary {
+      background-color: $color-primary;
+      color: $color-white;
+    }
+    &-text {
+      justify-content: initial;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      border: 0;
+      background: transparent;
+      &.blue {
+        color: lighten($color-secondary-blue, 5%);
+      }
+    }
+    &-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      span {
+        display: none;
+        font-size: 0;
+      }
+    }
+    &-link {
+      color: $color-secondary-font;
+    }
+    &-round {
+      border-radius: 25px;
+    }
+    &-circle {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid $color-palegray;
+      span {
+        display: none;
+        font-size: 0;
+      }
+      &-sm {
+        width: 24px;
+        height: 24px;
+      }
+      &-80 {
+        width: 80px;
+        height: 80px;
+      }
+    }
+    &-arrow {
+      span {
+        &:after {
+          content: '\e901';
+          font-family: 'makestar';
+          margin-left: 3px;
+        }
+      }
+    }
+    &-float {
+      position: fixed;
+      z-index: 56;
+      right: 16px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      font-size: 14px;
+      box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.15);
+      cursor: pointer;
+    }
+    &-faq {
+      bottom: 132px;
+      border: 0;
+      background-color: $color-primary;
+      color: $color-white;
+      transform: translateX(80px);
+      @include transition-default(all, 0.5s);
+      &.active {
+        transform: translateX(0);
+      }
+    }
+    &-top {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      bottom: 70px;
+      background-color: $color-white;
+      border: 1px solid $color-border-gray;
+      transform: translateX(80px);
+      @include transition-default(all, 0.9s);
+      &.active {
+        transform: translateX(0);
+      }
+      span {
+        font-size: 0;
+        color: #fff;
+        &:before {
+          content: "";
+          display: block;
+          width: 10px;
+          height: 2px;
+          background-color: #555;
+        }
+        &:after {
+          content: "";
+          display: block;
+          width: 6px;
+          height: 6px;
+          margin-top: 4px;
+          margin-left: 2px;
+          border: solid #555;
+          border-width: 0 2px 2px 0;
+          transform: rotate(-135deg);
+          -webkit-transform: rotate(-135deg);
+        }
+      }
+    }
+    &-full {
+      width: 100%;
+    }
+  }
+  &.button {
+    &-xs {
+      height: 28px;
+      padding-left: 16px;
+      padding-right: 16px;
+      font-weight: 500 !important;
+      font-size: 12px;
+    }
+    &-sm {
+      font-size: 14px;
+    }
+    &-md {
+      font-size: 15px;
+    }
+    &-lg {
+      font-size: 16px;
+    }
+    &-xl {
+      height: 60px;
+      padding-left: 120px;
+      padding-right: 120px;
+      font-size: 18px;
+    }
+  }
+  &.button {
+    $colors:(
+          'red': $color-primary,
+          'blue': lighten($color-secondary-blue, 5%),
+          'gray': $color-palegray,
+          'darkgray': $color-darkgray,
+          'info': $color-info,
+          'success': $color-success,
+          'warning': $color-warning,
+          'danger': $color-danger
+    );
+    @each $name, $color in $colors {
+      &-#{$name} {
+        background-color: $color;
+        color: $color-white;
+        font-weight: 500;
+        &:hover {
+          background-color: darken($color, 7%)
+        }
+      }
+    }
+    &-outline {
+      border: 1px solid $color-border-gray;
+      color: $color-darkgray;
+      $colors:(
+            'red': $color-primary,
+            'blue': lighten($color-secondary-blue, 5%),
+            'info': $color-info,
+            'success': $color-success,
+            'warning': $color-warning,
+            'danger': $color-danger
+      );
+      @each $name, $color in $colors {
+        &-#{$name} {
+          border-color: $color;
+          color: $color;
+          &:hover {
+            background-color: $color;
+            color: $color-white;
+          }
+        }
+      }
+    }
+    &-shadow {
+      @include box-shadow(3px, 0.7);
+    }
+  }
+  &.button {
+    &-disabled {
+      opacity: 0.7;
+      background-color: $color-midgray !important;
+      cursor: not-allowed;
+      &.button-outline {
+        border-color: $color-palegray;
+        background-color: $color-bg-lightgray !important;
+        color: $color-midgray;
+        &:hover {
+          box-shadow: none;
+          color: $color-midgray;
+        }
+      }
+    }
+  }
+}
+
+//mobile view
+
+@media (max-width: $breakpoint - 1) {
+  button,
+  [role="button"]{
+    &.button {
+      &-md {
+        min-height: 45px;
+        padding-left: 23px;
+        padding-right: 23px;
+        font-size: 14px;
+      }
+      &-shadow {
+        &-mobile {
+          @include box-shadow-paper;
+        }
+      }
+      &-faq {
+        bottom: 102px;
+      }
+      &-top {
+        bottom: 40px;
+      }
+    }
+  }
+}
+
+//pc view
+
+@media (min-width: $breakpoint) {
+  button,
+  [role="button"]{
+    &.button {
+      &-round {
+        border-radius: 30px;
+      }
+      &-outline {
+        @include transition-default(box-shadow);
+        &:hover {
+          @include box-shadow-paper;
+        }
+      }
+    }
+    &.button {
+      &-sm {
+        min-height: 40px;
+        padding-left: 26px;
+        padding-right: 26px;
+      }
+      &-md {
+        min-height: 45px;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      &-lg {
+        min-width: 150px;
+        min-height: 50px;
+      }
+    }
+  }
+}
+
+[role="button"] {
+  display: inline-flex;
+  align-items: center;
+}

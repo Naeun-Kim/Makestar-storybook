@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+}
+
+html,
+body {
+  overscroll-behavior-y: none;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  &.grounded {
+    overflow: hidden;
+    overscroll-behavior: none;
+  }
+  //inline style override
+  min-height: auto !important;
+  padding-top: auto !important;
+  top: inherit !important;
+}
+
+.font-loaded body {
+  font-family: "Noto Sans", sans-serif;
+}
+
+main {
+  position: relative;
+  min-height: 100vh;
+  --page-transition-height: 0;
+}
+
+:hover {
+  //-webkit-user-select: none;
+  //-webkit-touch-callout: none;
+}
+
+@media only screen and (max-width: $breakpoint-only-mobile) {
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, Sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+a,
+a:hover,
+a:link,
+a:active,
+a:visited {
+  text-decoration: none;
+  color: $color-black;
+}
+
+ul,
+ol {
+  margin-bottom: 0;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+:focus {
+  outline-color: transparent;
+  outline-style: none;
+}
+
+::placeholder {
+  color: #b0b0b0;
+  font-weight: 300;
+}
+
+[role="button"] {
+  cursor: pointer;
+}
+
+h1,
+h2 {
+  font-weight: 500;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+main,
+.whole-overlay {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+  }
+}
+
+h2 {
+  font-size: 20px;
+  & + .desc-title {
+    display: block;
+
+    color: $color-gray;
+    & + .icon-add {
+      margin-top: 26px;
+      &:before {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+//helper
+
+.flex-layout {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-middle {
+  align-items: center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.set-relative {
+  position: relative;
+}
+
+.scroll-x {
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.flip-v {
+  transform: rotate(-180deg);
+}
+
+.line-divider {
+  border-top: 1px solid $color-border-darkgray;
+}
+
+.bar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  &:after {
+    content: "|";
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+.square-ratio {
+  position: relative;
+  &:before {
+    content: "";
+    display: block;
+    margin-top: 100%;
+  }
+  .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  background-color: $color-white;
+  animation: slide-down 0.7s;
+}
+
+.tooltip {
+  z-index: 20;
+  padding: 16px;
+  font-size: 13px;
+  color: #555;
+  line-height: 18px;
+  background-color: $color-bg-lightgray;
+  border: 1px solid $color-lightgray;
+  @include box-shadow-paper;
+  &:before {
+    content: "";
+    position: relative;
+    display: block;
+    top: -18px;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    transform: rotate(45deg) translateX(-50%);
+    background-color: $color-bg-lightgray;
+    border-top: 1px solid $color-lightgray;
+    border-left: 1px solid $color-lightgray;
+  }
+}
+
+.label {
+  &.label-new {
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    &:before {
+      content: "N";
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: $color-white;
+      font-size: 10px;
+      font-weight: 700;
+      width: 12px;
+      height: 12px;
+      background-color: $color-primary;
+      border-radius: 2px;
+    }
+  }
+}
+
+.site-title {
+  display: none;
+}
+
+//pc view
+@media (min-width: $breakpoint) {
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+  }
+  i {
+    display: block;
+  }
+  h2 {
+    & + .desc-title {
+      padding-top: 4px;
+      font-size: 15px;
+      line-height: 20px;
+    }
+  }
+}
+
+//mobile view
+@media (max-width: $breakpoint - 1) {
+  body {
+    -webkit-text-size-adjust: none;
+  }
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  h2 {
+    font-size: 18px;
+    font-weight: 500;
+    & + .desc-title {
+      font-size: 14px;
+    }
+  }
+}
+
+//override legacy stylesheet
+@media (min-width: 768px) {
+  .container {
+    //width: auto !important;
+  }
+}

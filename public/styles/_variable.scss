@@ -1,0 +1,31 @@
+//Variables
+
+$color-primary: #e52e15;
+$color-secondary: #006a8b;
+$color-secondary-font: #008EBA;
+$color-secondary-orange: #FFC400;
+$color-secondary-green: #00bfb7;
+$color-secondary-blue: #007BA1;
+$color-third: #00a49d;
+$color-coral: lighten($color-primary, 30%);
+$color-white: #fff;
+$color-black: #333;
+$color-darkgray: #555;
+$color-gray: #888;
+$color-midgray: #aaa;
+$color-palegray: #ccc;
+$color-lightgray: #dedede;
+$color-bg-lightgray: #f2f2f2;
+$color-bg-gray: #c4c4c4;
+$color-bg-lightblue: #f7f8fa;
+$color-bg-progress: #ddd;
+$color-border-gray: #dedede;
+$color-border-darkgray: rgba(34,36,38,.2);
+$color-info: #3fa2f7;
+$color-success: #56c568;
+$color-warning: #ffc400;
+$color-danger: #ff4949;
+
+
+$breakpoint: 1024px;
+$breakpoint-only-mobile: 480px;

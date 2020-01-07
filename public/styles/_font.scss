@@ -1,0 +1,161 @@
+
+//default
+
+$fontDir: '../fonts/noto-sans/';
+
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-weight: 700;
+  font-display: fallback;
+  src: local("Noto Sans Bold"), local("Noto Sans Bold"), url("#{$fontDir}NotoSans-Bold.woff2") format("woff2"), url("#{$fontDir}NotoSans-Bold.woff") format("woff"), url("#{$fontDir}NotoSans-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-weight: 500;
+  font-display: fallback;
+  src: local("Noto Sans Medium"), local("Noto Sans Medium"), url("#{$fontDir}NotoSans-Medium.woff2") format("woff2"), url("#{$fontDir}NotoSans-Medium.woff") format("woff"), url("#{$fontDir}NotoSans-Medium.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-weight: 400;
+  font-display: fallback;
+  src: local("Noto Sans Regular"), local("Noto Sans Regular"), url("#{$fontDir}NotoSans-Regular.woff2") format("woff2"), url("#{$fontDir}NotoSans-Regular.woff") format("woff"), url("#{$fontDir}NotoSans-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-weight: 300;
+  font-display: fallback;
+  src: local("Noto Sans Light"), local("Noto Sans Light"), url("#{$fontDir}NotoSans-Light.woff2") format("woff2"), url("#{$fontDir}NotoSans-Light.woff") format("woff"), url("#{$fontDir}NotoSans-Light.ttf") format("truetype"); }
+
+
+//jp
+
+@font-face {
+  font-family: 'Noto Sans JP';
+  font-weight: 700;
+  font-display: fallback;
+  src: local("Noto Sans JP Bold"), local("Noto Sans JP Bold"), url("#{$fontDir}jp/NotoSansCJKjp-Bold.woff2") format("woff2"), url("#{$fontDir}jp/NotoSansCJKjp-Bold.woff") format("woff"), url("#{$fontDir}jp/NotoSansCJKjp-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Noto Sans JP';
+  font-weight: 500;
+  font-display: fallback;
+  src: local("Noto Sans JP Medium"), local("Noto Sans JP Medium"), url("#{$fontDir}jp/NotoSansCJKjp-Medium.woff2") format("woff2"), url("#{$fontDir}jp/NotoSansCJKjp-Medium.woff") format("woff"), url("#{$fontDir}jp/NotoSansCJKjp-Medium.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Noto Sans JP';
+  font-weight: 400;
+  font-display: fallback;
+  src: local("Noto Sans JP Regular"), local("Noto Sans JP Regular"), url("#{$fontDir}jp/NotoSansCJKjp-Regular.woff2") format("woff2"), url("#{$fontDir}jp/NotoSansCJKjp-Regular.woff") format("woff"), url("#{$fontDir}jp/NotoSansCJKjp-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Noto Sans JP';
+  font-weight: 300;
+  font-display: fallback;
+  src: local("Noto Sans JP Light"), local("Noto Sans JP Light"), url("#{$fontDir}jp/NotoSansCJKjp-Light.woff2") format("woff2"), url("#{$fontDir}jp/NotoSansCJKjp-Light.woff") format("woff"), url("#{$fontDir}jp/NotoSansCJKjp-Light.ttf") format("truetype"); }
+
+//zh
+
+
+@font-face {
+  font-family: 'Noto Sans SC';
+  font-weight: 700;
+  font-display: fallback;
+  src: local("Noto Sans SC Bold"), local("Noto Sans SC Bold"), url("#{$fontDir}sc/NotoSansCJKsc-Bold.woff2") format("woff2"), url("#{$fontDir}sc/NotoSansCJKsc-Bold.woff") format("woff"), url("#{$fontDir}sc/NotoSansCJKsc-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Noto Sans SC';
+  font-weight: 500;
+  font-display: fallback;
+  src: local("Noto Sans SC Medium"), local("Noto Sans SC Medium"), url("#{$fontDir}sc/NotoSansCJKsc-Medium.woff2") format("woff2"), url("#{$fontDir}sc/NotoSansCJKsc-Medium.woff") format("woff"), url("#{$fontDir}sc/NotoSansCJKsc-Medium.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Noto Sans SC';
+  font-weight: 400;
+  font-display: fallback;
+  src: local("Noto Sans SC Regular"), local("Noto Sans SC Regular"), url("#{$fontDir}sc/NotoSansCJKsc-Regular.woff2") format("woff2"), url("#{$fontDir}sc/NotoSansCJKsc-Regular.woff") format("woff"), url("#{$fontDir}sc/NotoSansCJKsc-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Noto Sans SC';
+  font-weight: 300;
+  font-display: fallback;
+  src: local("Noto Sans SC Light"), local("Noto Sans SC Light"), url("#{$fontDir}sc/NotoSansCJKsc-Light.woff2") format("woff2"), url("#{$fontDir}sc/NotoSansCJKsc-Light.woff") format("woff"), url("#{$fontDir}sc/NotoSansCJKsc-Light.ttf") format("truetype"); }
+
+//kr
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-weight: 700;
+  font-display: fallback;
+  src: local("Noto Sans KR Bold"), local("Noto Sans KR Bold"), url("#{$fontDir}kr/NotoSansCJKkr-Bold.woff2") format("woff2"), url("#{$fontDir}kr/NotoSansCJKkr-Bold.woff") format("woff"), url("#{$fontDir}kr/NotoSansCJKkr-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-weight: 500;
+  font-display: fallback;
+  src: local("Noto Sans KR Medium"), local("Noto Sans KR Medium"), url("#{$fontDir}kr/NotoSansCJKkr-Medium.woff2") format("woff2"), url("#{$fontDir}kr/NotoSansCJKkr-Medium.woff") format("woff"), url("#{$fontDir}kr/NotoSansCJKkr-Medium.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-weight: 400;
+  font-display: fallback;
+  src: local("Noto Sans KR Regular"), local("Noto Sans KR Regular"), url("#{$fontDir}kr/NotoSansCJKkr-Regular.woff2") format("woff2"), url("#{$fontDir}kr/NotoSansCJKkr-Regular.woff") format("woff"), url("#{$fontDir}kr/NotoSansCJKkr-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-weight: 300;
+  font-display: fallback;
+  src: local("Noto Sans KR Light"), local("Noto Sans KR Light"), url("#{$fontDir}kr/NotoSansCJKkr-Light.woff2") format("woff2"), url("#{$fontDir}kr/NotoSansCJKkr-Light.woff") format("woff"), url("#{$fontDir}kr/NotoSansCJKkr-Light.ttf") format("truetype"); }
+
+
+:lang(ja),
+:lang(en),
+:lang(ko),
+:lang(zh) {
+  text-rendering: initial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:lang(ja) {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+:lang(en) {
+  font-family: "Noto Sans", sans-serif;
+  word-break: keep-all;
+}
+
+:lang(ko) {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+:lang(zh) {
+  font-family: "Noto Sans SC", sans-serif;
+}
+
+//font awesome override
+:lang(ja),
+:lang(ko),
+:lang(en),
+:lang(zh) {
+  i {
+    font-family: FontAwesome;
+  }
+}
+
+//font icon
+
+@font-face {
+  font-family: "makestar";
+  font-display: fallback;
+  src: url("../fonts/makestar.eot?sypaun");
+  src: url("../fonts/makestar.eot?sypaun#iefix")
+  format("embedded-opentype"),
+  url("../fonts/makestar.ttf?sypaun") format("truetype"),
+  url("../fonts/makestar.woff?sypaun") format("woff"),
+  url("../fonts/makestar.svg?sypaun#makestar") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}

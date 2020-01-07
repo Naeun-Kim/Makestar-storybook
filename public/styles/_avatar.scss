@@ -1,0 +1,50 @@
+//avatar
+
+$sizes: (32, 36, 40, 48);
+$colors: ('#f6a89d', '#80cbc4', '#b2dfdb','#c5e1a5', '#90caf9', );
+.avatar {
+  position: relative;
+  display: inline-block;
+  min-width: 20px;
+  min-height: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+  text-align: center;
+  @each $size in $sizes {
+    &.avatar-#{$size} {
+      width: #{$size}px;
+      height: #{$size}px;
+      img {
+        width: #{$size}px;
+        height: #{$size}px;
+      }
+      svg {
+        margin-top: calc( #{$size}px / 4 );
+      }
+    }
+  }
+  @for $color from 1 through length($colors) {
+    &:nth-of-type(#{length($colors)}n + #{$color}) {
+      background-color: unquote(nth($colors, $color));
+    }
+  }
+  @for $i from 1 through 4 {
+    &:nth-of-type(#{$i}) {
+      z-index: 5-$i;
+    }
+  }
+  & + .avatar {
+    margin-left: -5px;
+  }
+  &-more {
+    background-color: lighten($color-coral, 5%) !important;
+    &:before {
+      @include flex-center;
+      content: "\e90a";
+      height: 100%;
+      font-family: 'makestar';
+      font-size: 20px;
+      color: $color-white;
+    }
+  }
+}

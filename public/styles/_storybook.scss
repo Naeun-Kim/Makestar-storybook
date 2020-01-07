@@ -1,0 +1,10 @@
+//button
+
+.button + .button {
+  margin-left: 10px;
+}
+
+hr {
+  border-top: 1px solid $color-lightgray;
+  border-bottom: 0;
+}
